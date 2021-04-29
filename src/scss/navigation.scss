@@ -9,6 +9,8 @@ nav {
 
         li {
             list-style-type: none;
+            padding: 10px;
+
 
             a {
                 color: rgb(34, 34, 34);
@@ -89,6 +91,8 @@ nav {
 
     input:checked ~ ul {
         display: flex;
+        width: calc(100% + 30px);
+        margin-left: -15px;
     }
 
     
