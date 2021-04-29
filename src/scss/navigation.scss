@@ -11,15 +11,40 @@ nav {
 			list-style-type: none;
 			padding: 10px;
 			border-bottom: 1px solid grey;
-            cursor: pointer;
+			cursor: pointer;
+
+			@media screen and (min-width: 786px) {
+				border-bottom: none;
+				padding: 12px 42px;
+				border: 1px solid grey;
+
+				&:nth-last-of-type(1) {
+					border-left: 0;
+				}
+
+				&:nth-last-of-type(2) {
+					border-left: 0;
+				}
+
+				&:nth-last-of-type(3) {
+					border-left: 0;
+				}
+
+				&:nth-last-of-type(4) {
+					border-left: 0;
+				}
+			}
 
 			&:nth-last-of-type(1) {
 				border-bottom: none;
+				@media screen and (min-width: 786px) {
+					border-bottom: 1px solid grey;
+				}
 			}
 
-            &:hover {
-                background-color: azure;
-            }
+			&:hover {
+				background-color: azure;
+			}
 
 			a {
 				color: rgb(34, 34, 34);
@@ -29,6 +54,12 @@ nav {
 
 		@media screen and (min-width: 786px) {
 			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin-top: 30px;
+			max-width: 709px;
+			margin: 30px auto;
+			box-shadow: 2px 3px #888;
 		}
 	}
 

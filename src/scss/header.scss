@@ -1,56 +1,68 @@
 .header {
+	@media screen and (min-width: 786px) {
+		margin-top: 50px;
+	}
 
-    &__top {
-        @media screen and (min-width: 786px) {
+	&__top {
+		@media screen and (min-width: 786px) {
 			display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+			justify-content: center;
+			align-items: center;
+			position: relative;
 		}
-    }
+	}
 
-    &__title {
-        text-align: center;
-        margin-bottom: 25px;
-         @media screen and (min-width: 786px) {
+	&__title {
+		text-align: center;
+		margin-bottom: 25px;
+		@media screen and (min-width: 786px) {
 			margin-bottom: 0;
-            margin-right: 25px;
+			margin-right: 25px;
+			font-size: 40px;
 		}
-    }
+	}
 
-    &__subtext {
-        text-align: left;
-        margin-top: 30px;
-    }
+	&__subtext {
+		text-align: left;
+		margin-top: 30px;
 
-    &__logo {
-        display: none;
-        		@media screen and (min-width: 786px) {
+		&.desktop {
+			display: none;
+			@media screen and (min-width: 786px) {
+				display: block;
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__logo {
+		display: none;
+		@media screen and (min-width: 786px) {
 			display: flex;
-            font-size: 30px;
-            margin-right: 20px;
+			font-size: 45px;
+			margin-right: 25px;
 		}
-    }
+	}
 
-    .social-links-wrapper {
-        display: none;
+	.social-links-wrapper {
+		display: none;
 
-        @media screen and (min-width: 786px) {
+		@media screen and (min-width: 786px) {
 			display: flex;
-            position: absolute;
-            right: 0;
-            top: -10px;
+			position: absolute;
+			right: 0;
+			top: -25px;
 
-            svg {
-                font-size: 30px;
+			svg {
+				font-size: 30px;
 
-                &:nth-last-of-type(1) {
-                    margin-left: 20px;
-                }
-                &:nth-last-of-type(2) {
-                    margin-left: 20px;
-                }
-            }
+				&:nth-last-of-type(1) {
+					margin-left: 20px;
+				}
+				&:nth-last-of-type(2) {
+					margin-left: 20px;
+				}
+			}
 		}
-    }
+	}
 }
