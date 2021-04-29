@@ -1,0 +1,37 @@
+nav {
+    text-align: center;
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            list-style-type: none;
+
+            a {
+                color: rgb(34, 34, 34);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .hamburger-menu {
+        position: relative;
+        width: 30px;
+        height: 4px;
+        background: #000;
+        border-radius: 10px;
+        cursor: pointer;
+        z-index: 2;
+        transition: 0.3s;
+
+        &:before {
+            content: '';
+            position: absolute;
+            height: 4px;
+            right: 0;
+            background: #000;
+            border-radius: 10px;
+            transition: 0.3s
+        }
+    }
+}
