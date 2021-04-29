@@ -3,9 +3,8 @@
 import '@fortawesome/fontawesome-free/js/all';
 
 import '../scss/main.scss';
-
-import { toggleMenu } from './functions/menu';
+import { displayBooks } from './functions/displayBooks';
 
 console.log('index loaded');
 // menu();
-toggleMenu();
+displayBooks();
