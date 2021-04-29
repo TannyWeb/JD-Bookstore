@@ -21,6 +21,34 @@ export const displayBooks = async () => {
 		// loop through featured books
 		for (const featuredBook of featuredBooks) {
 			console.log(featuredBook);
+			const title = featuredBook.volumeInfo.title;
+			// Optional Chaining as some books dont contain subtitle and this avoid error;
+
+			let subtitle = '';
+			// For some books a subtitle doesnt exist so this is checking to avoid error
+			if (featuredBook.volumeInfo.subtitle) {
+				subtitle = featuredBook.volumeInfo.subtitle;
+			}
+			const bookCover = featuredBook.volumeInfo.imageLinks.smallThumbnail;
+			const authors = featuredBook.volumeInfo.authors.join(',');
+			const pages = featuredBook.volumeInfo.pageCount;
+			const description = featuredBook.volumeInfo.description;
+
+			const htmlString = `
+                <div class="book-item">
+                    <img class="book-item__img" src="${bookCover}">
+                    <h3 class="book-item__title">${title}<span class="book-item__subtitle">${subtitle}</span></h3>
+                    <p class="book-item__authors">${authors}</p>
+                    <p class="book-item__pages">Pages: ${pages}</p>
+                    <p class="book-item__description">${truncateString(description, 140)}</p>
+                </div>
+            `;
+
+			console.log(htmlString);
+
+			// add looped html string to the parent wrapper
+
+			document.querySelector('.featured').insertAdjacentHTML('beforeend', htmlString);
 		}
 
 		// loop through books
@@ -55,4 +83,11 @@ function insertParentDivs() {
 	targetEl.insertAdjacentElement('beforeend', featureBooksWrapper);
 	targetEl.insertAdjacentElement('beforeend', allBooksWrapper);
 	document.querySelector('.featured').insertAdjacentElement('afterbegin', featuredTitle);
+}
+
+function truncateString(str, num) {
+	if (str.length <= num) {
+		return str;
+	}
+	return str.slice(0, num) + '...';
 }
