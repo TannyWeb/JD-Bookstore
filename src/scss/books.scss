@@ -24,6 +24,11 @@ main {
 		margin-bottom: 15px;
 		background-color: #fff;
 		padding: 15px;
+        cursor: pointer;
+
+        &.is-selected {
+            background-color: #fdcb6e;
+        }
 
 		&__img {
 			width: 100px;
