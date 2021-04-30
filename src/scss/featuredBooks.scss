@@ -1,0 +1,41 @@
+.books-wrapper.featured {
+    background-color: #dedede;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+
+    .featured__title {
+        margin-bottom: 15px;
+    }
+
+    .book-item {
+        border: 1px solid black;
+        margin-bottom: 15px;
+        background-color: #fff;
+        padding: 15px;
+
+        &__img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__authors {
+            margin-bottom: 10px;
+        }
+
+        &__pages {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        &__description {
+            font-size: 14px;
+        }
+
+
+    }
+}
