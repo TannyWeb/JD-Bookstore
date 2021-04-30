@@ -60,17 +60,19 @@ export const displayBooks = async () => {
 				subtitle = book.volumeInfo.subtitle;
 			}
 			const bookCover = book.volumeInfo.imageLinks.smallThumbnail;
-			const authors = book.volumeInfo.authors.join(',');
+			const authors = book.volumeInfo.authors.join(', ');
 			const pages = book.volumeInfo.pageCount;
 			const description = book.volumeInfo.description;
 
 			const htmlString = `
                 <div class="book-item">
                     <img class="book-item__img" src="${bookCover}">
-                    <h3 class="book-item__title">${title}<span class="book-item__subtitle">${subtitle}</span></h3>
-                    <p class="book-item__authors">${authors}</p>
-                    <p class="book-item__pages">Pages: ${pages}</p>
-                    <p class="book-item__description">${truncateString(description, 140)}</p>
+                        <div class="book-item-text">
+                        <h3 class="book-item__title">${title}<span class="book-item__subtitle">${subtitle}</span></h3>
+                        <p class="book-item__authors">${authors}</p>
+                        <p class="book-item__pages">Pages: ${pages}</p>
+                        <p class="book-item__description">${truncateString(description, 140)}</p>
+                    </div>
                 </div>
             `;
 
