@@ -50,6 +50,10 @@ nav {
 				color: rgb(34, 34, 34);
 				text-decoration: none;
 			}
+
+             @media screen and (min-width: 1024px) {
+                padding: 14px 60px;
+             }
 		}
 
 		@media screen and (min-width: 786px) {
@@ -61,6 +65,11 @@ nav {
 			margin: 30px auto;
 			box-shadow: 2px 3px #888;
 		}
+
+         @media screen and (min-width: 1024px) {
+            max-width: 890px;
+
+         }
 	}
 
 	.hamburger-menu {
