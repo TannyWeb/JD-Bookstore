@@ -43,8 +43,6 @@ export const displayBooks = async () => {
                 </div>
             `;
 
-			console.log(htmlString);
-
 			// add looped html string to the parent wrapper
 
 			document.querySelector('.featured__book-item-wrapper').insertAdjacentHTML('beforeend', htmlString);
@@ -79,8 +77,6 @@ export const displayBooks = async () => {
                     </div>
                 </div>
             `;
-
-			console.log(htmlString);
 
 			// add looped html string to the parent wrapper
 
