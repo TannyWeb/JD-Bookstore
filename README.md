@@ -17,6 +17,7 @@ Responsive mobile menu is built purely with CSS as stated in the brief and using
 -- Tablet view has been added to make the layout more fluid and is between 768px to 1024px
 -- Desktop goes from 1024px upwards
 
+// Followed and implemented all points given on the brief
 
 
 

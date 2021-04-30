@@ -68,6 +68,31 @@ main {
 			&-text {
 				margin-left: 15px;
 			}
+
+            &:nth-last-of-type(1) {
+                display: none;
+                @media screen and (min-width: 786px) {
+				display: flex;
+			}
+            }
+            &:nth-last-of-type(2) {
+                display: none;
+                       @media screen and (min-width: 786px) {
+				display: flex;
+			}
+            }
+            &:nth-last-of-type(3) {
+                display: none;
+                       @media screen and (min-width: 786px) {
+				display: flex;
+			}
+            }
+            &:nth-last-of-type(4) {
+                display: none;
+                       @media screen and (min-width: 786px) {
+				display: flex;
+			}
+            }
 		}
 	}
 
