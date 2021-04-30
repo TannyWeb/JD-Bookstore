@@ -43,7 +43,11 @@ nav {
 			}
 
 			&:hover {
-				background-color: azure;
+				background-color: #2d3436;
+                
+                a {
+                    color: #fff;
+                }
 			}
 
 			a {
