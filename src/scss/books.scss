@@ -1,9 +1,24 @@
+main {
+    .container {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+
+    }
+}
 .books-wrapper {
 	@media screen and (min-width: 786px) {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
+
+    @media screen and (min-width: 1024px) {
+        width: 60%;
+        margin-right: 20px;
+    }
 
 	.book-item {
 		border: 1px solid black;
@@ -60,6 +75,9 @@
 			display: flex;
             justify-content: center;
         }
+        @media screen and (min-width: 1024px) {
+			width: calc(30% - 10px);
+        }
 
 		.featured__title {
 			margin-bottom: 15px;
@@ -72,6 +90,10 @@
         .featured__book-item-wrapper {
             @media screen and (min-width: 786px) {
 				display: flex;
+            }
+
+            @media screen and (min-width: 1024px) {
+                flex-direction: column;
             }
         }
 
