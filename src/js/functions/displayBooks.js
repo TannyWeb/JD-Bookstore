@@ -47,7 +47,7 @@ export const displayBooks = async () => {
 
 			// add looped html string to the parent wrapper
 
-			document.querySelector('.featured').insertAdjacentHTML('beforeend', htmlString);
+			document.querySelector('.featured__book-item-wrapper').insertAdjacentHTML('beforeend', htmlString);
 		}
 
 		// loop through books
@@ -97,6 +97,10 @@ function insertParentDivs() {
 	featuredTitle.classList.add('featured__title');
 	featuredTitle.innerText = 'Featured';
 
+	// Add featured-book-item-wrapper
+	const featuredBookItemWrapper = document.createElement('div');
+	featuredBookItemWrapper.classList.add('featured__book-item-wrapper');
+
 	//Create all books wrapper
 	const allBooksWrapper = document.createElement('div');
 	allBooksWrapper.classList.add('books-wrapper');
@@ -111,6 +115,7 @@ function insertParentDivs() {
 	targetEl.insertAdjacentElement('beforeend', featureBooksWrapper);
 	targetEl.insertAdjacentElement('beforeend', allBooksWrapper);
 	document.querySelector('.featured').insertAdjacentElement('afterbegin', featuredTitle);
+	document.querySelector('.featured').insertAdjacentElement('beforeend', featuredBookItemWrapper);
 }
 
 // Function to truncate the book description to 140 characters dynamically

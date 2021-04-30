@@ -1,0 +1,80 @@
+.books-wrapper {
+	@media screen and (min-width: 786px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.book-item {
+		border: 1px solid black;
+		margin-bottom: 15px;
+		background-color: #fff;
+		padding: 15px;
+
+		&__img {
+			width: 100px;
+			margin-bottom: 10px;
+		}
+
+		&__title {
+			margin-bottom: 10px;
+		}
+
+		&__authors {
+			margin-bottom: 10px;
+		}
+
+		&__pages {
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+
+		&__description {
+			font-size: 14px;
+		}
+	}
+
+	&:not(.featured) {
+		.book-item {
+			display: flex;
+
+			@media screen and (min-width: 786px) {
+				width: calc(50% - 10px);
+			}
+
+			&-text {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	// Only affects featured section
+	&.featured {
+		background-color: #dedede;
+		border: 1px solid black;
+		padding: 15px;
+		text-align: center;
+		margin-bottom: 20px;
+
+        @media screen and (min-width: 786px) {
+			display: flex;
+            justify-content: center;
+        }
+
+		.featured__title {
+			margin-bottom: 15px;
+
+            @media screen and (min-width: 786px) {
+				text-align: center;
+            }
+		}
+
+        .featured__book-item-wrapper {
+            @media screen and (min-width: 786px) {
+				display: flex;
+            }
+        }
+
+
+	}
+}
