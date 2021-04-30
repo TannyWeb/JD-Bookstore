@@ -61,6 +61,7 @@
 			position: absolute;
 			right: 0;
 			top: -25px;
+            cursor: pointer;
 
 			svg {
 				font-size: 30px;
@@ -71,7 +72,11 @@
 				&:nth-last-of-type(2) {
 					margin-left: 20px;
 				}
+                &:hover {
+                    opacity: .5;
+                }
 			}
+
 		}
 	}
 }

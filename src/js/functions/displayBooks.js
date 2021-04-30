@@ -68,7 +68,11 @@ export const displayBooks = async () => {
                 <div class="book-item">
                     <img class="book-item__img" src="${bookCover}">
                         <div class="book-item-text">
-                        <h3 class="book-item__title">${title}<span class="book-item__subtitle">${subtitle}</span></h3>
+                        <div class="book-item__title-wrapper">
+
+                        <h3 class="book-item__title">${title}</h3>
+                        <h4 class="book-item__subtitle">${subtitle}</h4>
+                        </div>
                         <p class="book-item__authors">${authors}</p>
                         <p class="book-item__pages">Pages: ${pages}</p>
                         <p class="book-item__description">${truncateString(description, 140)}</p>
